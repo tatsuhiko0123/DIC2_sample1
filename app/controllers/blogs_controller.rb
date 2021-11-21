@@ -9,6 +9,8 @@ class BlogsController < ApplicationController
     Blog.create(blog_params)
     redirect_to new_blog_path
   end
+  def show
+  end
   private
   def blog_params
     params.require(:blog).permit(:title, :content)
